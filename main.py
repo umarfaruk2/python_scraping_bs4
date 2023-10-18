@@ -58,14 +58,17 @@ for link in a:
           else:
               data['Land share'].append(info_text)
 
-      p_tag = description.find_all('p') 
-      description_text = ""
-      for p in p_tag:
-        description_text += p.text + "\n"
+      if description is not None:
+        p_tag = description.find_all('p')
+        description_text = ""
+        for p in p_tag:
+            description_text += p.text + "\n"
+        data['Description'].append(description_text)
+      else:
+        data['Description'].append("No description available")
+      
+      
 
-      data['Description'].append(description_text)
-      
-      
 
 for i in range(len(data['Land share'])):
     try:
