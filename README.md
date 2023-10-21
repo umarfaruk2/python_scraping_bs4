@@ -7,5 +7,9 @@ This project i build for scraping real state data from bangladeshi company Bikro
 ## What data you can get
 
 - Property title
-- Property address
-- 
+- Property (Address, Bathrooms, Bedrooms, Size, etc)
+- Property description
+
+## How to start
+
+Just download the repo and install `pip install bs4` then run the code. 
